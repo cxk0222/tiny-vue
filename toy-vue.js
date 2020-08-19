@@ -1,8 +1,5 @@
 const re = /^{{([\s\S]+)}}$/
 
-// var el = document.querySelector('#app')
-// console.log('el111', el)
-
 export class ToyVue {
   constructor(config) {
     this.template = document.querySelector(config.el)
@@ -20,7 +17,6 @@ export class ToyVue {
     if (node.nodeType === Node.TEXT_NODE) {
       if (node.textContent.trim().match(re)) {
         const name = RegExp.$1.trim()
-        // console.log('name', name)
         effect(() => node.textContent = this.data[name])
       }
     }
