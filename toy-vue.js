@@ -88,14 +88,14 @@ function reactive(object) {
   return observed
 }
 
-// let dummy
+let dummy
 
-// const counter = reactive({ num: 0 })
+const counter = reactive({ num: 0 })
 
-// effect(() => (dummy = counter.num))
+effect(() => (dummy = counter.num))
 
-// console.log('dummy', dummy)
+console.log('dummy', dummy)
 
-// counter.num = 7
+counter.num = 7
 
-// console.log('dummy', dummy)
+console.log('dummy', dummy)
